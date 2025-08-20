@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mike Sullivan</title>
+    <meta name="description" content="Mike Sullivan - Profile" />
+    <style>
+      :root { color-scheme: light dark; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: #fbeac1;
+        color: #222;
+      }
+      .container {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        gap: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+      }
+      img {
+        width: 240px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,.12);
+        background: #fbeac1;
+        border: 2px solid #e6d3a3;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        align-items: center;
+        margin-top: 1rem;
+      }
+      a {
+        color: #0969da;
+        text-decoration: none;
+        font-size: 1.08rem;
+        transition: color 0.15s;
+        word-break: break-all;
+      }
+      a:hover {
+        color: #2449a6;
+        text-decoration: underline;
+      }
+      h1 {
+        margin-bottom: 0.2em;
+        font-size: 2.4rem;
+        letter-spacing: -1px;
+      }
+      footer {
+        margin-top: 2rem;
+        opacity: 0.7;
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main id="root"></main>
+    <script type="module">
+      import React from 'https://esm.sh/react@18';
+      import { createRoot } from 'https://esm.sh/react-dom@18/client';
+
+      const name = 'Mike Sullivan';
+      const linkedInUrl = 'https://www.linkedin.com/in/mbsull/';
+      const githubUrl = 'https://github.com/FrenchToucan';
+      const imageUrl = './profile.jpg';
+
+      function App() {
+        return (
+          React.createElement('div', { className: 'container' },
+            React.createElement('h1', null, name),
+            React.createElement('img', {
+              src: imageUrl,
+              alt: `${name}'s Profile`
+            }),
+            React.createElement('div', { className: 'links' },
+              React.createElement('a', {
+                href: linkedInUrl,
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              }, 'LinkedIn'),
+              React.createElement('a', {
+                href: githubUrl,
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              }, 'GitHub')
+            ),
+            React.createElement('footer', null, '© ', new Date().getFullYear(), ' Mike Sullivan')
+          )
+        );
+      }
+
+      createRoot(document.getElementById('root')).render(React.createElement(App));
+    </script>
+  </body>
+</html>
