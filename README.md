@@ -1,6 +1,6 @@
 # Mike Sullivan — Profile Page
 
-This is a single-file React profile page at [FrenchToucan.github.io](https://FrenchToucan.github.io).
+This is a single-file React profile page available at [FrenchToucan.github.io](https://FrenchToucan.github.io).
 
 ## Links
 
